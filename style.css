@@ -1,0 +1,89 @@
+body {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#user-chat-container {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 250px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+#user-chat {
+    height: 200px;
+    overflow-y: auto;
+}
+#user-input {
+    width: 80%;
+    padding: 5px;
+}
+#send-button {
+    width: 15%;
+    padding: 5px;
+    cursor: pointer;
+}
+#chat-container {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: grab;
+    border: 2px solid white;
+    overflow: hidden;
+    z-index: 1000;
+}
+#chat {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+    max-height: 450px;
+}
+#drag-handle {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    text-align: center;
+    cursor: grab;
+    user-select: none;
+    border-radius: 5px;
+}
+.message {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+    #chat-container {
+        width: 90%;
+        left: 5%;
+        height: 300px;
+        bottom: 10px;
+        right: auto;
+        position: fixed;
+    }
+    .message {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
